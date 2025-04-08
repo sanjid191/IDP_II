@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #954caf, #81C784);
+    background-size: cover;
+    position: relative;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-container input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.search-container button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-container button:hover {
+    background-color: #e6b800;
+}
+
+.landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 70px); /* Adjust for header height */
+    padding-left: 200px; /* Increased padding to move text to the right */
+    position: relative;
+    z-index: 1;
+}
+
+.landing-text h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.courses-page {
+    padding: 50px;
+    text-align: center;
+}
+
+.courses-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.courses-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.categories-button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.categories-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduced padding for smaller cards */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.9rem; /* Adjusted font size for smaller cards */
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon {
+    font-size: 1.8rem; /* Reduced icon size */
+    margin-bottom: 8px;
+}
+
+.course-card h3 {
+    font-size: 1.2rem; /* Reduced heading size */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.course-card p {
+    font-size: 0.9rem; /* Reduced paragraph size */
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* New courses section styles */
+
+.courses-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.courses-header .header-left h2 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.courses-header .header-left p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.courses-header .header-right .see-all-button {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #4CAF50;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.courses-header .header-right .see-all-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.courses-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Reduced gap to fit smaller cards */
+    margin-bottom: 30px; /* Add spacing between rows */
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduced padding for smaller cards */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.9rem; /* Adjusted font size for smaller cards */
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-icon {
+    font-size: 1.8rem; /* Reduced icon size */
+    margin-bottom: 8px;
+}
+
+.course-card h3 {
+    font-size: 1.2rem; /* Reduced heading size */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.course-card p {
+    font-size: 0.9rem; /* Reduced paragraph size */
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.explore-button {
+    padding: 8px 15px; /* Reduced button size */
+    border: none;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem; /* Adjusted font size */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.explore-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.explore-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.95); /* Slightly shrink on click */
+}
